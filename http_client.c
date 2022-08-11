@@ -1,7 +1,3 @@
-/* The code is subject to Purdue University copyright policies.
- * DO NOT SHARE, DISTRIBUTE, OR POST ONLINE
- */
-
 #include <arpa/inet.h>
 #include <errno.h>
 #include <fcntl.h>
