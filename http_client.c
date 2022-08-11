@@ -1,17 +1,17 @@
-#include <arpa/inet.h>
-#include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <fcntl.h>
 #include <netdb.h>
 #include <netinet/in.h>
+#include <arpa/inet.h>
+#include <errno.h>
 #include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/socket.h>
-#include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
 
 // Assumption: any http request/response header will not exceed 4096 bytes.
 #define MAX_BUFFER 4096
@@ -62,7 +62,7 @@ void write_to_file(int fd, const char *buf, int buf_len);
 
 int main(int argc, char *argv[]) {
     if (argc != 4) {
-        fprintf(stderr, "usage: ./http_client [host] [port number] [filepath]\n");
+        fprintf(stderr, "There should be three input arguement: host, port number, filepath\n");
         exit(1);
     }
 
